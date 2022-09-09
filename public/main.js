@@ -1,5 +1,7 @@
 console.log("MainJS loaded");
 
+const lookup = {};
+
 // const socket = io.connect("http://localhost:7331");
 const socket = io("/");
 
@@ -56,7 +58,8 @@ navigator.mediaDevices
 
             call.on("stream", (remoteStream) => {
               // Received stream
-
+              if (lookup[newPeerId] === true) return;
+              lookup[newPeerId] = true;
               console.log("received stream");
               let newVideo = document.createElement("video");
               newVideo.style.width = "640px";
