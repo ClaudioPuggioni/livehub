@@ -1,11 +1,11 @@
 console.log("MainJS loaded");
 
 // const socket = io.connect("http://localhost:7331");
-const socket = io.connect(`https://livehub-io.herokuapp.com:${process.env.PORT}`);
+const socket = io.connect(`https://livehub-io.herokuapp.com/`);
 
 const peer = new Peer(undefined, {
   host: "https://livehub-io.herokuapp.com/",
-  port: process.env.PORT,
+  // port: ,
   path: "/peerjs",
 });
 
