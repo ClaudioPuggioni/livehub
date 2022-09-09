@@ -40,6 +40,7 @@ const idStore = {};
 
 io.on("connection", (socket) => {
   console.log("Client connected", socket.id);
+  socket.emit("port_transfer", process.env.PORT);
 
   socket.on("new-connection", (peerId) => {
     console.log("New connection request");
