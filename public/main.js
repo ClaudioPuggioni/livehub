@@ -60,6 +60,7 @@ navigator.mediaDevices
               // Received stream
               if (lookup[newPeerId] === true) return;
               lookup[newPeerId] = true;
+
               console.log("received stream");
               let newVideo = document.createElement("video");
               newVideo.style.width = "640px";
