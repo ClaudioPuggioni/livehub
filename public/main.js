@@ -1,7 +1,7 @@
 console.log("MainJS loaded");
 
 // const socket = io.connect("http://localhost:7331");
-const socket = io(`/`);
+const socket = io("/");
 
 socket.on("connection", () => {
   console.log("Connected to server");
